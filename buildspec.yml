@@ -19,7 +19,6 @@ phases:
     commands:
       - docker push 334902933163.dkr.ecr.us-east-1.amazonaws.com/ecs-docker-repo:latest 
       - echo Writing image definitions file...
-      - printf '{"ImageURI":"%s"}' 334902933163.dkr.ecr.us-east-1.amazonaws.com/ecs-docker-repo:latest > imagedefinitions.json
       - printf '[{"name":"ecs-rolling-update","imageUri":"%s"}]' 334902933163.dkr.ecr.us-east-1.amazonaws.com/ecs-docker-repo:latest > imagedefinitions.json
       
 artifacts:
