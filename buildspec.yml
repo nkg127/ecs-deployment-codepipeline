@@ -17,8 +17,8 @@ phases:
 
   post_build:
     commands:
-      - docker push $REPOSITORY_URI:$IMAGE_TAG 
+      - docker push 334902933163.dkr.ecr.us-east-1.amazonaws.com/ecs-docker-repo:latest 
       - echo Writing image definitions file...
-      - printf '{"ImageURI":"%s"}' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+      - printf '{"ImageURI":"%s"}' 334902933163.dkr.ecr.us-east-1.amazonaws.com/ecs-docker-repo:latest > imagedefinitions.json
 artifacts:
     files: imagedefinitions.json
