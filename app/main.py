@@ -18,6 +18,6 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
 
 @app.get("/", tags=['Root Endpoint'])
 async def root():
-    return {"message": "Welcome to FastAPI Email Service!"}
+    return {"message": "Welcome to FastAPI Email Service - update1!"}
 
 app.include_router(api_router, prefix="/api")
